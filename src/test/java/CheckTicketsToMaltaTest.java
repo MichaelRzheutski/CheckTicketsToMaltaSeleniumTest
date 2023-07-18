@@ -19,12 +19,12 @@ public class CheckTicketsToMaltaTest {
         WebDriverManager.chromedriver().setup();
         webDriver = new ChromeDriver();
         webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+        webDriver.manage().timeouts().pageLoadTimeout(Duration.ofMinutes(3));
     }
 
     @Test
     public void ticketsCheck() {
-        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofMinutes(3));
 
         By origin = By.xpath("//*[@id='origin']");
         By destination = By.xpath("//*[@id='destination']");
